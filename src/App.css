@@ -1,0 +1,327 @@
+.header {
+  padding: 0px;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 90px;
+}
+
+nav h2 {
+  background: -webkit-linear-gradient(176deg, #212529 70.84%, #fd377e 29.25%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav button {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5b6166;
+  background: #e9ecef;
+  border: 1.4px solid #e9ecef;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.page {
+  display: flex;
+}
+
+.divLeft {
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.form span {
+  color: #868e96;
+  font-size: initial;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.form button {
+  padding: 7px 50px;
+  background: #fd377e;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form input {
+  padding: 5px;
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+}
+
+.form select {
+  padding: 5px;
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+}
+
+.totalMoney {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 70%;
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.totalMoney h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0px 15px 0px 100px;
+}
+
+.totalMoney p {
+  color: #fd377e;
+}
+
+.totalMoney span {
+  margin: 0 auto;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5b6166;
+}
+
+.divRight {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 529px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.filters h3 {
+  margin-right: 165px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #212529;
+}
+
+.filters button {
+  padding: 10px;
+  background: #e9ecef;
+  border: 1.4px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fd377e;
+  color: #ffffff;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.card h3 {
+  width: 60%;
+  margin-left: inherit;
+}
+
+.card p {
+  width: 26%;
+}
+.card span {
+  margin-left: inherit;
+}
+
+.card button {
+  background: #e9ecef;
+  border: 1.4px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .divLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+  }
+  .filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .filters h3 {
+    margin: 37px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  .card h3 {
+    width: 45%;
+    margin-left: inherit;
+  }
+
+  .card p {
+    width: 33%;
+  }
+}
+
+@media (max-width: 320px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+  }
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .divLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 630px;
+  }
+
+  .form {
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 35px;
+  }
+
+  .form span {
+    color: #868e96;
+    font-size: initial;
+  }
+
+  .totalMoney {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 70%;
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 4px;
+  }
+
+  .totalMoney h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .divRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .filters h3 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #212529;
+    margin: 48px;
+  }
+}
