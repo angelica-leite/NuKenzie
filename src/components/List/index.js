@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "../Card";
 
-function List({ listTransactions }) {
+function List({ listTransactions, setListTransactions }) {
   const [filter, setFilter] = useState("Todos");
 
   const filtered = listTransactions.filter((item) => {
@@ -40,10 +40,22 @@ function List({ listTransactions }) {
       <div className="cards">
         {filter === "Todos"
           ? listTransactions.map((transaction, index) => (
-              <Card transaction={transaction} key={index} />
+              <Card
+                transaction={transaction}
+                index={index}
+                listTransactions={listTransactions}
+                setListTransactions={setListTransactions}
+                key={index}
+              />
             ))
           : filtered.map((transaction, index) => (
-              <Card transaction={transaction} key={index} />
+              <Card
+                transaction={transaction}
+                index={index}
+                listTransactions={listTransactions}
+                setListTransactions={setListTransactions}
+                key={index}
+              />
             ))}
       </div>
     </>

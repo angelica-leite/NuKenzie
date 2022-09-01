@@ -1,7 +1,14 @@
 import React from "react";
 import ButtonTrash from "./../Img/ButtonTrash.png";
 
-function Card({ transaction }) {
+function Card({ transaction, index, listTransactions, setListTransactions }) {
+  const filtered = (item) => {
+    const filter = listTransactions.filter((transaction) => {
+      return transaction.description !== item;
+    });
+    setListTransactions(filter);
+  };
+
   return (
     <div
       className="card"
@@ -13,22 +20,14 @@ function Card({ transaction }) {
       }}
     >
       <h3>{transaction.description}</h3>
+      <p>R${transaction.value}</p>
+      <button onClick={() => filtered(transaction.description)}>
+        <img src={ButtonTrash} alt="Botão excluir" />
+      </button>
       {transaction.type === "Entrada" ? (
-        <>
-          <p>R${transaction.value}</p>
-          <button>
-            <img src={ButtonTrash} alt="" />
-          </button>
-          <span>Entrada</span>
-        </>
+        <span>Entrada</span>
       ) : (
-        <>
-          <p>R${transaction.value}</p>
-          <button>
-            <img src={ButtonTrash} alt="" />
-          </button>
-          <span>Despesa</span>
-        </>
+        <span>Despesas</span>
       )}
     </div>
   );
